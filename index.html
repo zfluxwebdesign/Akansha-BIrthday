@@ -3,23 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Akansha 🎉</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Elegant Surprise</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .hidden-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      animation: fadeIn 2s ease forwards;
+    }
+
+    button {
+      background: #ff7eb3;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff5d9e;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Happy Birthday <span>Akansha 🎉💖</span></h1>
-    <p class="subtitle">Wishing you joy and endless smiles today and always.</p>
-    
-    <button id="music-btn">Play Music 🎵</button>
-    
-    <div class="cake">
-      🎂
-    </div>
+    <button onclick="showMessage()">Click Me 🎁</button>
+    <div id="message" class="hidden-message">✨ Surprise Message Appears Here! ✨</div>
   </div>
 
-  <canvas id="confetti"></canvas>
-  
-  <script src="script.js"></script>
+  <script>
+    function showMessage() {
+      document.getElementById("message").style.display = "block";
+    }
+  </script>
 </body>
 </html>
